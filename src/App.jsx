@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchPhotos, fetchVideos } from './api/mediaApi';
+import { fetchPhotos, fetchVideos, fetchGIFs } from './api/mediaApi';
 
 const App = () => {
   return (
@@ -24,6 +24,17 @@ const App = () => {
         }}
       >
         Get Videos
+      </button>
+
+       <button 
+        className='bg-blue-500 px-4 py-2 rounded'
+        onClick={async () => {
+          // Await the function and store the returned data
+          const data = await fetchGIFs('cat');
+          console.log("Data received in App component:", data);
+        }}
+      >
+        Get GIFs
       </button>
     </div>
   )
