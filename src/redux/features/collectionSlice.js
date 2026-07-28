@@ -26,13 +26,14 @@ const collectionSlice = createSlice({
         clearCollection : (state) => {
             state.items = []
             localStorage.removeItem('collection')
-        }
+        },
+        
     } 
 })
 
 export const { 
     addCollection, 
     removeCollection, 
-    clearCollection
+    clearCollection,
     } = collectionSlice.actions ;
 export default collectionSlice.reducer 

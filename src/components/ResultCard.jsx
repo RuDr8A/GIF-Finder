@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { addCollection } from '../redux/features/collectionSlice' 
+import { addCollection} from '../redux/features/collectionSlice' 
+import { toast, Bounce } from 'react-toastify';
 
 const ResultCard = ({ item }) => {
 
@@ -9,7 +10,17 @@ const ResultCard = ({ item }) => {
    
     const handleSave = (item) => {
         dispatch(addCollection(item))
-        alert('Saved to collection!');
+        toast.success('Added to Collection ✅', {
+            position: "top-center",
+            autoClose: 3000, 
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
     }
 
   return (

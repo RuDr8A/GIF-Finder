@@ -62,7 +62,6 @@ const ResultGrid = () => {
                     }
                 }
                 
-                console.log("Normalized Info Array:", info);
                 
                 // 6. Dispatch the clean 'info' array to Redux!
                 dispatch(setResults(info));

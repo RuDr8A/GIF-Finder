@@ -2,6 +2,8 @@ import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import Collection from './pages/Collection'
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
@@ -12,7 +14,7 @@ const App = () => {
         <Route path = '/collection' element = {<Collection/>}/>
       </Routes>
 
-      
+      <ToastContainer />
     </div>
   )
 }
