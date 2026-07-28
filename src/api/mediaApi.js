@@ -11,8 +11,7 @@ export async function fetchPhotos(query, page = 1, per_page = 20) {
             headers: { Authorization: `Client-ID ${UNSPLASH_KEY}` }
         });
         
-        // Log it to see the exact structure of the Unsplash data
-        console.log("Unsplash API Response:", res.data); 
+        
         
         // Return the results array so your React component can map over it later
         return res.data; 
@@ -29,8 +28,7 @@ export async function fetchVideos(query, page = 1, per_page = 15) {
             headers: { Authorization: PEXEL_KEY }
         });
         
-        // Log it to see the exact structure of the Unsplash data
-        console.log("Pexel API Response:", res.data); 
+         
         
         // Return the results array so your React component can map over it later
         return res.data; 
@@ -54,8 +52,7 @@ export async function fetchGIFs(query, page = 1, per_page = 15) {
             }
         });
         
-        // Log it to see the exact structure of the Giphy data
-        console.log("Giphy API Response:", res.data); 
+        
         
         // Return the results array so your React component can map over it later
         return res.data; 
