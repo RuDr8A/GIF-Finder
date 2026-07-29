@@ -1,7 +1,7 @@
 import axios from 'axios' 
 
 const UNSPLASH_KEY = import.meta.env.VITE_UNSPLASH_API ;
-const PEXEL_KEY = import.meta.env.VITE_PEXEL_API ;
+const PEXELS_KEY = import.meta.env.VITE_PEXELS_API ;
 const GIPHY_KEY = import.meta.env.VITE_GIPHY_API ;
 
 export async function fetchPhotos(query, page = 1, per_page = 20) {
@@ -25,7 +25,7 @@ export async function fetchVideos(query, page = 1, per_page = 15) {
     try {
         const res = await axios.get('https://api.pexels.com/videos/search', {
             params: { query, page, per_page },
-            headers: { Authorization: PEXEL_KEY }
+            headers: { Authorization: PEXELS_KEY }
         });
         
          
